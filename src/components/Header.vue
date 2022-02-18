@@ -1,10 +1,12 @@
 <template>
-  
+  <section>
+
+  </section>
 </template>
 
 <script>
 export default {
-    name: Header,
+    name: "Header",
 }
 </script>
 
