@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :navBar="navBar" :navPage="navPage" :headImage="headImage"/>
+    <Header :navBar="navBar" :navPage="navPage" :headImages="headImages"/>
     <Main />
     <Footer />
   </div>
@@ -41,8 +41,7 @@ export default {
         next: "NEXT",
       }],
 
-      headImage: [{
-        bgImage: "h3-rev-img-",
+      headImages: [{
         image: "h3-rev-img-"
       }]
     }
