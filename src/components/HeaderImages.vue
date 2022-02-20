@@ -5,7 +5,7 @@
             <a href="#">{{ navPage[0].prev }}</a>
         </div>
 
-        <div class="col-8 d-flex justify-content-center" v-for="image in headImages" :key="image.id">
+        <div class="col-8 d-flex justify-content-center" v-for="image in headerImages" :key="image.id">
             <img :src="require (`../assets/img/${image.image}5.png`)" alt="">
             <img class="img-pizza-header" :src="require (`../assets/img/${image.image}6.png`)" alt="">
         </div>
@@ -19,9 +19,9 @@
 
 <script>
 export default {
-    name: "HeaderSub",
+    name: "HeaderImages",
 
-    props: ["navPage", "headImages"],
+    props: ["navPage", "headerImages"],
 }
 </script>
 

@@ -4,23 +4,23 @@
       <HeaderNavbar :navBar="navBar" />
 
       <!-- Sub-NavBar -->
-      <HeaderSub :navPage="navPage" :headImages="headImages"/>
+      <HeaderImages :navPage="navPage" :headerImages="headerImages"/>
   </section>
 </template>
 
 <script>
 import HeaderNavbar from "./HeaderNavbar.vue"
-import HeaderSub from "./HeaderSub.vue"
+import HeaderImages from "./HeaderImages.vue"
 
 export default {
     name: "Header",
 
     components: {
         HeaderNavbar,
-        HeaderSub,
+        HeaderImages,
     },
 
-    props: ["navBar", "navPage", "headImages"],
+    props: ["navBar", "navPage", "headerImages"],
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header :navBar="navBar" :navPage="navPage" :headImages="headImages"/>
-    <Main />
+    <Header :navBar="navBar" :navPage="navPage" :headerImages="headerImages"/>
+    <Main :navPage="navPage" />
     <Footer />
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
         next: "NEXT",
       }],
 
-      headImages: [{
+      headerImages: [{
         image: "h3-rev-img-"
       }]
     }
@@ -51,5 +51,9 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/style.scss';
+
+* {
+  overflow-x: hidden;
+}
 
 </style>
