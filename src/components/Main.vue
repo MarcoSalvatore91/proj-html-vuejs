@@ -17,6 +17,10 @@
 
       <!-- Section Advertising-->
       <Advertising :advertisingSection="advertisingSection"/>
+
+      <!-- Section Testionial -->
+      <Testimonial :images="imagesTestimonial"/>
+
   </section>
 </template>
 
@@ -24,6 +28,7 @@
 import Advertising from './Advertising.vue'
 import Slider from "./Slider.vue"
 import Special from "./Special.vue"
+import Testimonial from "./Testimonial.vue"
 
 export default {
     name: "Main",
@@ -32,6 +37,7 @@ export default {
         Slider,
         Special,
         Advertising,
+        Testimonial,
     },
 
     props: ["navPage"],
@@ -40,6 +46,8 @@ export default {
         return {
             
             images: ["1", "2", "3", "4"],
+
+            imagesTestimonial: ["1", "2", "4", "3"],
 
             journalSlider: [{
                 textComment: "FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES",
@@ -57,7 +65,7 @@ export default {
 
             advertisingSection: [{
                 text: "GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE"
-            }]
+            }],
         }
     }
 }
