@@ -1,9 +1,9 @@
 <template>
   <section>
         <div class="d-flex">
-        <div class="mb-2" v-for="image in images" :key="image">
-            <img :src="require (`../assets/img/h1-team-${image}a.jpg`)" alt="">
-        </div>
+            <div class="mb-2" v-for="image in images" :key="image">
+                <img :src="require (`../assets/img/h1-team-${image}a.jpg`)" alt="">
+            </div>
         </div>
   </section>
 </template>

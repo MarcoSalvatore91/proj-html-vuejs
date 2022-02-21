@@ -21,6 +21,9 @@
       <!-- Section Testionial -->
       <Testimonial :images="imagesTestimonial"/>
 
+      <!-- Section Sponsor -->
+      <Sponsor :images="imagesSponsors"/>
+
   </section>
 </template>
 
@@ -29,6 +32,7 @@ import Advertising from './Advertising.vue'
 import Slider from "./Slider.vue"
 import Special from "./Special.vue"
 import Testimonial from "./Testimonial.vue"
+import Sponsor from "./Sponsors.vue"
 
 export default {
     name: "Main",
@@ -38,6 +42,7 @@ export default {
         Special,
         Advertising,
         Testimonial,
+        Sponsor,
     },
 
     props: ["navPage"],
@@ -48,6 +53,8 @@ export default {
             images: ["1", "2", "3", "4"],
 
             imagesTestimonial: ["1", "2", "4", "3"],
+
+            imagesSponsors: ["1", "2", "3", "4", "5"],
 
             journalSlider: [{
                 textComment: "FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES",
