@@ -16,7 +16,7 @@
       <Special :specialSection="specialSection"/>
 
       <!-- Section Advertising-->
-      <Advertising />
+      <Advertising :advertisingSection="advertisingSection"/>
   </section>
 </template>
 
