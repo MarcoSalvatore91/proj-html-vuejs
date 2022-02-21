@@ -30,6 +30,9 @@
       <!-- Section Events -->
       <Events :events="eventsSection"/>
 
+      <!-- Section Booking -->
+      <Booking />
+
   </section>
 </template>
 
@@ -41,6 +44,7 @@ import Testimonial from "./Testimonial.vue"
 import Sponsor from "./Sponsors.vue"
 import Pizzas from "./Pizzas.vue" 
 import Events from "./Events.vue"
+import Booking from "./Booking.vue"
 
 export default {
     name: "Main",
@@ -53,6 +57,7 @@ export default {
         Sponsor,
         Pizzas,
         Events,
+        Booking,
     },
 
     props: ["navPage"],
