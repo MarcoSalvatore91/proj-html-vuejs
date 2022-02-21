@@ -27,6 +27,9 @@
       <!-- Section Pizzas -->
       <Pizzas :pizzasSection="pizzasSection"/>
 
+      <!-- Section Events -->
+      <Events :events="eventsSection"/>
+
   </section>
 </template>
 
@@ -37,6 +40,7 @@ import Special from "./Special.vue"
 import Testimonial from "./Testimonial.vue"
 import Sponsor from "./Sponsors.vue"
 import Pizzas from "./Pizzas.vue" 
+import Events from "./Events.vue"
 
 export default {
     name: "Main",
@@ -48,6 +52,7 @@ export default {
         Testimonial,
         Sponsor,
         Pizzas,
+        Events,
     },
 
     props: ["navPage"],
@@ -64,7 +69,7 @@ export default {
 
             /* Data Components */
             journalSlider: [{
-                textComment: "FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES",
+                textComment: '"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES"',
                 source: "WASHINGTON POST 2018"                
             }],
 
@@ -78,15 +83,21 @@ export default {
             }],
 
             advertisingSection: [{
-                text: "GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE"
+                text: "GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!"
             }],
 
             pizzasSection: [{
                 choose: "CHOOSE YOUR FLAVOR",
                 title: "THE BEST PIZZA MENU IN TOWN",
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui."
-                
             }],
+
+            eventsSection: [{
+                dayDate: ["02", "03", "05"],
+                monthDate: "NOV",
+                typeEvents: ["TRADITIONAL NEAPOLITAN PIES IN KYOTO PIZZA MERCATO", "TERAZZA PATIO DINING SPACE OPENING THIS WEEKEND", "SIENNA PRIVATE DINING ROOM WITH STEPHANE BRUNN"],
+                place: "204 E. Pizzetta Tommaso"
+            }]
         }
     }
 }

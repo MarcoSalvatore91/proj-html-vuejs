@@ -3,9 +3,9 @@
 
       <!-- Title -->
       <div id="title" class="text-center" v-for="pizza in pizzasSection" :key="pizza.id">
-          <span>{{ pizza.choose }}</span>
+          <span class="choose fw-bold">{{ pizza.choose }}</span>
           <h1>{{ pizza.title }}</h1>
-          <p>{{ pizza.text }}</p>
+          <p class="text-under-title">{{ pizza.text }}</p>
       </div>
 
       <!-- Pizza -->
@@ -13,9 +13,9 @@
           <div class="pizza-start">
               <img src="../assets/img/h3-product-img-1a-100x100.png" alt="Bismark">
               <div class="pizza-type">
-                <span>BISMARK</span>
+                <span class="text-yellow">BISMARK</span>
                 <div class="d-flex justify-content-center">
-                    <span class="text-decoration-line-through pe-2">$5.00</span><span>$30.00</span>
+                    <span class="text-decoration-line-through pe-2 text-orange">$5.00</span><span class="text-orange">$30.00</span>
                 </div>
               </div>
           </div>
@@ -23,38 +23,38 @@
             <div>
                 <img src="../assets/img/h3-product-img-2a-150x150.png" alt="Fiori di zucca">
                 <div class="pizza-type">
-                    <span>FIORI DI ZUCCA</span>
-                    <span>$7.00 - $50.00</span>
+                    <span class="text-yellow">FIORI DI ZUCCA</span>
+                    <span class="text-orange">$7.00 - $50.00</span>
                 </div>
             </div>
             <div class="rel-position">
                 <img src="../assets/img/h3-product-img-3a-150x150.png" alt="Valdostana">
                 <span class="sold rounded-circle fw-bold">SOLD</span>
                 <div class="pizza-type">
-                    <span>VALDOSTANA</span>
-                    <span>$55.00</span>
+                    <span class="text-yellow">VALDOSTANA</span>
+                    <span class="text-orange">$55.00</span>
                 </div>
             </div>
             <div>
                 <img src="../assets/img/h3-product-img-4a-150x150.png" alt="Pizza Tartufata">
                 <div class="pizza-type">
-                    <span>PIZZA TARTUFATA</span>
-                    <span>$45.00</span>
+                    <span class="text-yellow">PIZZA TARTUFATA</span>
+                    <span class="text-orange">$45.00</span>
                 </div>
             </div>
             <div>
                 <img src="../assets/img/h3-product-img-5a-150x150.png" alt="Francescana">
                 <div class="pizza-type">
-                    <span>FRANCESCANA</span>
-                    <span>$25.00</span>
+                    <span class="text-yellow">FRANCESCANA</span>
+                    <span class="text-orange">$25.00</span>
                 </div>
             </div>
           </div>
           <div class="pizza-end">
               <img src="../assets/img/h3-product-img-6a-100x100.png" alt="Campagnola">
               <div class="pizza-type">
-                <span>CAMPAGNOLA</span>
-                <span>$50.00 - $95.00</span>
+                <span class="text-yellow">CAMPAGNOLA</span>
+                <span class="text-orange">$50.00 - $95.00</span>
               </div>
           </div>
       </div>
@@ -73,9 +73,21 @@ export default {
 @import '../assets/scss/style.scss';
 
 #title {
+
     margin: 100px 0;
+
     h1 {
         overflow: hidden;
+    }
+
+    .choose {
+        font-size: $size-small;
+        color: $color-orange;
+    }
+
+    .text-under-title {
+        font-size: $size-large;
+        color: $color-grey;
     }
 }
 
@@ -96,6 +108,12 @@ export default {
 
     .pizza-type {
         margin-top: 20px;
+        .text-yellow {
+            color: $color-dark-yellow;
+        }
+        .text-orange {
+            color: $color-orange;
+        }
     }
     
     img {
@@ -105,6 +123,7 @@ export default {
     span {
         display: block;
         text-align: center;
+        font-weight: bold;
     }
 
     .rel-position {

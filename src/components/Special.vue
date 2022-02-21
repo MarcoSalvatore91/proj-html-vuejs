@@ -10,16 +10,16 @@
             <div class="col-7 offset-3">
                 <div>
                     <h1>{{ special.title }}</h1> 
-                    <p>{{ special.text }}</p>   
+                    <p class="fw-bold">{{ special.text }}</p>   
                 </div>
 
                 <div v-for="i in 3" :key="i">
                     <div class="d-flex">
-                        <h3>{{ special.price[i] }}</h3>
+                        <h3 class="price">{{ special.price[i] }}</h3>
                         <h3>{{ special.subTitle }}</h3>
                         <h3>{{ special.size[i] }}</h3>
                     </div>
-                    <p>{{ special.text }}</p>
+                    <p class="text-combo fw-bold">{{ special.text }}</p>
                 </div>
             </div>
 
@@ -39,6 +39,14 @@ export default {
 <style scoped lang="scss">
 @import '../assets/scss/style.scss';
 
+/* Utils */
+
+p {
+    color: $color-grey;
+}
+
+/* Special */
+
 #bg-side {
     height: 800px;
     background-image: url(../assets/img/h1-img-4.jpg);
@@ -54,9 +62,18 @@ export default {
 
 .section-combo {
 
+    .price {
+        color: $color-orange;
+    }
+
     h1, h3 {
         overflow: hidden;
         padding-right: 10px;
+    }
+
+    .text-combo {
+        padding-left: 55px;
+        font-size: $size-small;
     }
 }
 

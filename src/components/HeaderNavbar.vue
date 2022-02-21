@@ -3,7 +3,9 @@
       <section id="nav-bar-id">
         <div class="nav-bar row align-items-center" v-for="nav in navBar" :key="nav.id">
             <div class="col-2">
-                <a href="#">{{ nav.order }}</a>
+                <div class="contain-orange">
+                    <a href="#">{{ nav.order }}</a>
+                </div>
             </div>
 
             <div class="col-8 d-flex align-items-center justify-content-between">
@@ -18,7 +20,7 @@
 
             <div class="col-2 d-flex align-items-center justify-content-end">
                 <a href="#">{{ nav.cart }}</a>
-                <a href="#">{{ nav.search }}</a>
+                <a href="#" class="ms-4">{{ nav.search }}</a>
             </div>
         </div>
       </section>
@@ -39,19 +41,30 @@ export default {
 /* Utils */
 a {
     text-decoration: $decoration-none;
+    font-size: $size-small;
+    color: $color-white;
+    font-weight: bold;
 }
 
 /* Nav-Bar */
 #nav-bar-id {
 
+    .contain-orange {
+        background-color: $color-orange;
+        padding: 10px 0;
+        text-align: center;
+        width: 120px;
+    }
+
     .nav-bar {
         width: $width-min;
         margin: $content-center;
+        
+        img {
+            width: 200px;
+        }
     }
     
-    img {
-        width: 200px;
-    }
     
 }
 </style>

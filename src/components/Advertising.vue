@@ -1,7 +1,7 @@
 <template>
   <section>
       <div id="add" class="row align-items-center my-2" v-for="advertising in advertisingSection" :key="advertising.id">
-          <h1 class="col-2 offset-3">{{ advertising.text }}</h1>
+          <h1 class="col-3 offset-3">{{ advertising.text }}</h1>
       </div>
   </section>
 </template>
@@ -25,6 +25,8 @@ export default {
 
     h1 {
         overflow: hidden;
+        color: $color-white;
+        font-size: 60px;
     }
 }
 
