@@ -24,6 +24,9 @@
       <!-- Section Sponsor -->
       <Sponsor :images="imagesSponsors"/>
 
+      <!-- Section Pizzas -->
+      <Pizzas :pizzasSection="pizzasSection"/>
+
   </section>
 </template>
 
@@ -33,6 +36,7 @@ import Slider from "./Slider.vue"
 import Special from "./Special.vue"
 import Testimonial from "./Testimonial.vue"
 import Sponsor from "./Sponsors.vue"
+import Pizzas from "./Pizzas.vue" 
 
 export default {
     name: "Main",
@@ -43,6 +47,7 @@ export default {
         Advertising,
         Testimonial,
         Sponsor,
+        Pizzas,
     },
 
     props: ["navPage"],
@@ -50,12 +55,14 @@ export default {
     data() {
         return {
             
+            /* Data Images */
             images: ["1", "2", "3", "4"],
 
             imagesTestimonial: ["1", "2", "4", "3"],
 
             imagesSponsors: ["1", "2", "3", "4", "5"],
 
+            /* Data Components */
             journalSlider: [{
                 textComment: "FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES",
                 source: "WASHINGTON POST 2018"                
@@ -72,6 +79,13 @@ export default {
 
             advertisingSection: [{
                 text: "GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE"
+            }],
+
+            pizzasSection: [{
+                choose: "CHOOSE YOUR FLAVOR",
+                title: "THE BEST PIZZA MENU IN TOWN",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui."
+                
             }],
         }
     }
