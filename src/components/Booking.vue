@@ -1,12 +1,17 @@
 <template>
   <section>
       <div id="booking" class="d-flex justify-content-center align-items-center">
-          <input type="number" class="ps-3">
-          <span class="px-3 fw-bold">FOR</span>
-          <input type="date" class="px-3">
-          <span class="px-3 fw-bold">AT</span>
-          <input type="time" class="px-3">
-          <button class="mx-5 fw-bold">BOOK A TABLE</button>
+          <div>
+            <input type="number" class="ps-3">
+            <span class="px-3 fw-bold">FOR</span>
+            <input type="date" class="px-3">
+            <span class="px-3 fw-bold">AT</span>
+            <input type="time" class="px-3">
+            <button class="mx-5 fw-bold">BOOK A TABLE</button>
+            <div>
+                <span>*Powered by OpenTable</span>
+            </div>
+          </div>
       </div>
   </section>
 </template>

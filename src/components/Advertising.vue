@@ -20,8 +20,8 @@ export default {
 #add {
     background-image: url(../assets/img/h3-background-img.jpg);
     height: 600px;
-    background-size: 90% 70%;
     background-position: center;
+    background-repeat: no-repeat;
 
     h1 {
         overflow: hidden;
