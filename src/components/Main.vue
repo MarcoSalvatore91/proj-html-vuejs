@@ -73,10 +73,20 @@ export default {
             imagesSponsors: ["1", "2", "3", "4", "5"],
 
             /* Data Components */
-            journalSlider: [{
+            journalSlider: [
+                {
                 textComment: '"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES"',
                 source: "WASHINGTON POST 2018"                
-            }],
+                },
+                {
+                textComment: '"EVERY BITE IS AN EXPLOSION OF FLAVORS, DEFINITELY ONE OF THE BEST PIZZAS EVER TRIED"',
+                source: "USA TODAY 2020"                
+                },
+                {
+                textComment: '"WOAH, ARE THE ONLY WORDS YOU WILL BE ABLE TO SAY AFTER TRYING IT"',
+                source: "NEW YORK, NEW YORK 2021"                
+                },
+            ],
 
             specialSection :[{
                 image: "h1-img-7n.png",
