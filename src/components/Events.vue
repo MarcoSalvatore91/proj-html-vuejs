@@ -44,7 +44,17 @@
                 </div>
             </div>
         </div>
+
         <div class="bgc-image col-6"></div>
+
+        <div>
+          <img class="svg-top rounded-circle" src="../assets/svg/svg-4.svg" alt="slice-pizza">
+        </div>
+
+        <div>
+          <img class="svg-bottom rounded-circle" src="../assets/svg/svg-4.svg" alt="slice-pizza">
+        </div>
+
       </div>
   </section>
 </template>
@@ -62,6 +72,7 @@ export default {
 
 #events {
     height: 900px;
+    position: relative;
 
     .data {
 
@@ -118,6 +129,23 @@ export default {
         margin: 40px 0;
         border-top: 3px dotted yellow;
     }
+
+    .svg-top {
+        position: absolute;
+        padding: 20px;
+        background-color: rgb(246,247,242);
+        top: 100px;
+        right: 50px;
+    }
+
+    .svg-bottom {
+        position: absolute;
+        padding: 20px;
+        background-color: rgb(246,247,242);
+        bottom: 250px;
+        right: 50px;
+    }
+
 }
 
 </style>

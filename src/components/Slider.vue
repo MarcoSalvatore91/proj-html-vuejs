@@ -29,6 +29,10 @@
             <div @click="isActive(index)" :class="{ 'active-point' : index === currentIndex }" class="point-slider"></div>
         </div>
     </div>
+
+    <div>
+        <img class="svg" src="../assets/svg/svg-4.svg" alt="slice-pizza">
+    </div>
   </section>
 </template>
 
@@ -143,6 +147,12 @@ export default {
 
     .active-point {
         background-color: $color-dark-yellow;
+    }
+
+    .svg {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
     }
 
 }

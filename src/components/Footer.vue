@@ -35,6 +35,10 @@
             </div>
             <div id="bg-image" class="col-5"></div>
         </div>
+
+        <div>
+          <img class="svg rounded-circle" src="../assets/svg/svg-4.svg" alt="slice-pizza">
+        </div>
     </section>
 </template>
 
@@ -52,6 +56,15 @@ export default {
 section {
     height: 750px;
     background-color: $bgc-black;
+    position: relative;
+
+    .svg {
+        position: absolute;
+        padding: 20px;
+        background-color: rgb(246,247,242);
+        bottom: 50px;
+        right: 50px;
+    }
 }
 
 #bg-image {

@@ -25,6 +25,10 @@
 
         </div>
       </div>
+
+      <div>
+          <img class="svg rounded-circle" src="../assets/svg/svg-4.svg" alt="slice-pizza">
+      </div>
   </section>
 </template>
 
@@ -47,35 +51,48 @@ p {
 
 /* Special */
 
-#bg-side {
-    height: 800px;
-    background-image: url(../assets/img/h1-img-4.jpg);
+#special {
+    position: relative;
 
-    img {
-        height: 400px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #bg-side {
+        height: 800px;
+        background-image: url(../assets/img/h1-img-4.jpg);
+    
+        img {
+            height: 400px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .section-combo {
+    
+        .price {
+            color: $color-orange;
+        }
+    
+        h1, h3 {
+            overflow: hidden;
+            padding-right: 10px;
+        }
+    
+        .text-combo {
+            padding-left: 55px;
+            font-size: $size-small;
+        }
+    }
+    
+    .svg {
+        position: absolute;
+        padding: 20px;
+        background-color: rgb(246,247,242);
+        bottom: 250px;
+        right: 50px;
     }
 }
 
-.section-combo {
-
-    .price {
-        color: $color-orange;
-    }
-
-    h1, h3 {
-        overflow: hidden;
-        padding-right: 10px;
-    }
-
-    .text-combo {
-        padding-left: 55px;
-        font-size: $size-small;
-    }
-}
 
 
 </style>

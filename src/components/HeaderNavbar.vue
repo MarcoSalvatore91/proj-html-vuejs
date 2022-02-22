@@ -58,7 +58,6 @@ a {
 .svg {
     height: 10px;
     filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(25deg) brightness(97%) contrast(99%);
-
 }
 
 .cart {

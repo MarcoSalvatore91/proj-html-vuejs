@@ -11,7 +11,7 @@
       <!-- Pizza -->
       <div id="pizza" class="d-flex justify-content-between">
           <div class="pizza-start">
-              <img src="../assets/img/h3-product-img-1a-100x100.png" alt="Bismark">
+              <img class="pizzas" src="../assets/img/h3-product-img-1a-100x100.png" alt="Bismark">
               <div class="pizza-type">
                 <span class="text-yellow">BISMARK</span>
                 <div class="d-flex justify-content-center">
@@ -21,14 +21,14 @@
           </div>
           <div id="pizza-middle" class="d-flex justify-content-between mb-5">
             <div>
-                <img src="../assets/img/h3-product-img-2a-150x150.png" alt="Fiori di zucca">
+                <img class="pizzas" src="../assets/img/h3-product-img-2a-150x150.png" alt="Fiori di zucca">
                 <div class="pizza-type">
                     <span class="text-yellow">FIORI DI ZUCCA</span>
                     <span class="text-orange">$7.00 - $50.00</span>
                 </div>
             </div>
             <div class="rel-position">
-                <img src="../assets/img/h3-product-img-3a-150x150.png" alt="Valdostana">
+                <img class="pizzas" src="../assets/img/h3-product-img-3a-150x150.png" alt="Valdostana">
                 <span class="sold rounded-circle fw-bold">SOLD</span>
                 <div class="pizza-type">
                     <span class="text-yellow">VALDOSTANA</span>
@@ -36,14 +36,14 @@
                 </div>
             </div>
             <div>
-                <img src="../assets/img/h3-product-img-4a-150x150.png" alt="Pizza Tartufata">
+                <img class="pizzas" src="../assets/img/h3-product-img-4a-150x150.png" alt="Pizza Tartufata">
                 <div class="pizza-type">
                     <span class="text-yellow">PIZZA TARTUFATA</span>
                     <span class="text-orange">$45.00</span>
                 </div>
             </div>
             <div>
-                <img src="../assets/img/h3-product-img-5a-150x150.png" alt="Francescana">
+                <img class="pizzas" src="../assets/img/h3-product-img-5a-150x150.png" alt="Francescana">
                 <div class="pizza-type">
                     <span class="text-yellow">FRANCESCANA</span>
                     <span class="text-orange">$25.00</span>
@@ -51,12 +51,16 @@
             </div>
           </div>
           <div class="pizza-end">
-              <img src="../assets/img/h3-product-img-6a-100x100.png" alt="Campagnola">
+              <img class="pizzas" src="../assets/img/h3-product-img-6a-100x100.png" alt="Campagnola">
               <div class="pizza-type">
                 <span class="text-yellow">CAMPAGNOLA</span>
                 <span class="text-orange">$50.00 - $95.00</span>
               </div>
           </div>
+      </div>
+
+      <div>
+          <img class="svg rounded-circle" src="../assets/svg/svg-4.svg" alt="slice-pizza">
       </div>
   </section>
 </template>
@@ -72,70 +76,83 @@ export default {
 <style scoped lang="scss">
 @import '../assets/scss/style.scss';
 
-#title {
+section {
+    position: relative;
 
-    margin: 100px 0;
+    #title {
 
-    h1 {
-        overflow: hidden;
-    }
+        margin: 100px 0;
 
-    .choose {
-        font-size: $size-small;
-        color: $color-orange;
-    }
-
-    .text-under-title {
-        font-size: $size-large;
-        color: $color-grey;
-    }
-}
-
-#pizza {
-    .pizza-start {
-        position: relative;
-        right: 70px;
-    }
-
-    .pizza-end {
-        position: relative;
-        left: 70px;
-    }
-
-    #pizza-middle {
-        width: 1070px;
-    }
-
-    .pizza-type {
-        margin-top: 20px;
-        .text-yellow {
-            color: $color-dark-yellow;
+        h1 {
+            overflow: hidden;
         }
-        .text-orange {
+
+        .choose {
+            font-size: $size-small;
             color: $color-orange;
+        }
+
+        .text-under-title {
+            font-size: $size-large;
+            color: $color-grey;
+        }
+    }
+
+    #pizza {
+        .pizza-start {
+            position: relative;
+            right: 70px;
+        }
+
+        .pizza-end {
+            position: relative;
+            left: 70px;
+        }
+
+        #pizza-middle {
+            width: 1070px;
+        }
+
+        .pizza-type {
+            margin-top: 20px;
+            .text-yellow {
+                color: $color-dark-yellow;
+            }
+            .text-orange {
+                color: $color-orange;
+            }
+        }
+        
+        .pizzas {
+            height: 200px;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .rel-position {
+            position: relative;
+            .sold {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 20px 13px;
+                font-size: $size-medium;
+                background-color: $color-orange;
+            }
         }
     }
     
-    img {
-        height: 200px;
-    }
-
-    span {
-        display: block;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    .rel-position {
-        position: relative;
-        .sold {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 20px 13px;
-            font-size: $size-medium;
-            background-color: $color-orange;
-        }
+    .svg {
+        position: absolute;
+        padding: 20px;
+        background-color: rgb(246,247,242);
+        bottom: 400px;
+        right: 50px;
     }
 }
+
 </style>
