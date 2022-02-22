@@ -3,18 +3,18 @@
         <section id="sub-navbar" class="row justify-content-between">
             <div id="btn-prev" class="col-2 d-flex align-items-center">
                 <div class="prev-position rounded-circle">
-                    <a href="#" class="prev">{{ navPage[0].prev }}</a>
+                    <button @click="prevPage()" class="prev btn">{{ navPage[0].prev }}</button>
                 </div>
             </div>
 
             <div class="col-8 d-flex justify-content-center" v-for="image in headerImages" :key="image.id">
                 <img :src="require (`../assets/img/${image.image}5.png`)" alt="">
-                <img class="img-pizza-header" :src="require (`../assets/img/${image.image}6.png`)" alt="">
+                <img class="img-pizza-header" :src="require (`../assets/img/${image.image}${currentIndex}.png`)" alt="">
             </div>
 
             <div id="btn-next" class="col-2 d-flex justify-content-end align-items-center">
                 <div class="next-position rounded-circle">
-                    <a href="#" class="next">{{ navPage[0].next }}</a>
+                    <button @click="nextPage()" class="next btn">{{ navPage[0].next }}</button>
                 </div>
             </div>
         </section>
@@ -26,15 +26,41 @@ export default {
     name: "HeaderImages",
 
     props: ["navPage", "headerImages"],
+
+    data() {
+        return {
+            currentIndex: 6,
+        }
+    },
+
+    methods: {
+        prevPage() {
+            this.currentIndex -= 2;
+            if(this.currentIndex === 0) {
+                return this.currentIndex = 6;
+            }
+        },
+
+        nextPage() {
+            this.currentIndex += 2;
+            if(this.currentIndex > 6) {
+                return this.currentIndex = 2;
+            }
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
 @import '../assets/scss/style.scss';
 
+section {
+    overflow: hidden;
+}
+
 /* Utils */
 
-a {
+.btn {
     text-decoration: $decoration-none;
     font-size: $size-small;
     color: $color-orange;
@@ -53,7 +79,7 @@ a {
     #btn-prev {
         .prev-position {
             position: relative;
-            left: -50px;
+            left: -70px;
             transform: rotate(90deg);
             padding: 30px;
             background-color: $color-white;
@@ -66,13 +92,12 @@ a {
     #btn-next {
         .next-position {
             position: relative;
-            right: -50px;
-            transform: rotate(270deg);
-            padding: 30px;
+            right: -110px;
+            padding: 45px;
             background-color: $color-white;
             .next {
                 position: relative;
-                bottom: 25px;
+                right: 50px;
             }
         }
     }
